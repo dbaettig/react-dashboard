@@ -7,12 +7,11 @@ const counter = (sec) =>
 
 class Timer extends React.Component {
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            seconds: 60,
+    state = {
+        seconds: 10,
+        resetbutton: false,
 
-        };
+
     }
 
 
@@ -30,7 +29,7 @@ class Timer extends React.Component {
         if (this.state.seconds > 0) {
             clearInterval(this.decrementer);
             this.setState({
-                seconds: 60,
+                seconds: 10,
 
             });
         }
@@ -45,6 +44,9 @@ class Timer extends React.Component {
             clearInterval(this.decrementer);
 
         }
+        if (this.state.seconds === 0) {
+            this.setState({ resetbutton: true });
+        }
         return (
             <div className="wrapper">
                 <div className="timer">
@@ -52,14 +54,14 @@ class Timer extends React.Component {
                     <h2 className="counter">{counter(this.state.seconds)}</h2>
 
                     <button id="start-btn" onClick={this.handleStartClick}>start</button>
-                    <button id="reset-btn" onClick={this.handleResetClick}>reset</button>
-
+                    <button id="reset-btn" style={{ display: this.state.resetbutton ? 'block' : 'none' }}
+                        onClick={this.handleResetClick}>reset</button>
                 </div>
                 <div className="facts">
                     The Japanese also have a low tolerance of tardiness.
                     Their trains are considered to be on time if the delay is less than one minute.
                 </div>
-            </div>
+            </div >
         );
     }
 }

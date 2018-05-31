@@ -51,7 +51,7 @@ class Currencies extends React.Component {
                     <button id="refresh">{this.state.update} Update </button>
                 </div>
                 <div className="facts">
-                    <p>Placing a yen at a microwave while you’re in Japan can result in a 200,000 yen fine,
+                    <p>Placing a yen in a microwave while you’re in Japan can result in a 200,000 yen fine,
                     according to the Monetary Damage Control Act. Don’t say I didn’t warn you.</p>
                 </div>
             </div>

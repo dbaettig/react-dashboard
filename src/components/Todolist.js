@@ -59,7 +59,7 @@ class Todolist extends React.Component {
                 </div>
                 <div className="facts">
                     The workaholism of the Japanese stems from the notion of giri,
-                    or one’s duties andobligations to the society and its expectations.
+                    or one’s duties and obligations to the society and its expectations.
                 </div>
             </div >
 
