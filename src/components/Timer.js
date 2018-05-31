@@ -10,7 +10,7 @@ class Timer extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            seconds: 10,
+            seconds: 60,
 
         };
     }
@@ -30,7 +30,7 @@ class Timer extends React.Component {
         if (this.state.seconds > 0) {
             clearInterval(this.decrementer);
             this.setState({
-                seconds: 10,
+                seconds: 60,
 
             });
         }
@@ -57,7 +57,7 @@ class Timer extends React.Component {
                 </div>
                 <div className="facts">
                     The Japanese also have a low tolerance of tardiness.
-                    Their trains are consideredto be on time if the delay is less than one minute.
+                    Their trains are considered to be on time if the delay is less than one minute.
                 </div>
             </div>
         );
