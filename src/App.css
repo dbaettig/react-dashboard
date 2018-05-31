@@ -1,0 +1,234 @@
+body {
+  margin: 0px auto;
+  padding:0px;
+  background-color:whitesmoke;
+
+}
+
+.wrapper{
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  -webkit-box-shadow: 0px 6px 5px 0px rgba(0,0,0,0.34);
+-moz-box-shadow: 0px 6px 5px 0px rgba(0,0,0,0.34);
+box-shadow: 0px 6px 5px 0px rgba(0,0,0,0.34);
+  margin:40px;
+  background-color: white;
+
+}
+
+.IndexPage{
+  height:100vh;
+  background-color:whitesmoke;
+  text-align: center;
+  margin:0px;
+  width:100%;
+  display:flex;
+  flex-direction:row;
+  flex-wrap:wrap;
+  align-items:center;
+
+}
+.welcomeMessage{
+  width:50%;
+  margin-top:150px;
+  margin-left:40px;
+  
+}
+.welcomeMessage h2{
+  font-family:'bree serif';
+  font-size:1.8em;
+}
+.welcomeAnimation{
+  width:45%;
+
+  font-size:1.2em;
+  margin-top:150px;
+  margin-left:10px;
+  
+}
+
+.welcomeAnimation h1{
+  margin:0px;
+  padding:10px;
+  animation: float 6s ease-in-out infinite;
+  font-family:'bree serif', serif;
+}
+
+h1{
+  text-align: center;
+  font-family:'pacifico';
+  font-size:3em;
+  margin:20px;
+  
+
+}
+
+h2, h3{
+  font-family:'roboto';
+  margin:10px;
+  }
+
+
+.scroll{
+width:100%;
+text-align: center;
+}
+
+#scrollButton{
+border:none;
+background-color: transparent;
+overflow-y: scroll;
+scroll-behavior: smooth;
+outline:none;
+}
+
+button{
+  background: none;
+  border: 2px solid;
+  border-bottom-width: 4px;
+  font: inherit;
+  letter-spacing: inherit;
+  margin: 1em;
+  padding: 1em 2em;
+  text-transform: inherit;
+  transition: color 1s;
+  cursor:pointer;
+}
+input{
+  background: none;
+  border: 2px solid;
+  border-bottom-width: 4px;
+  font: inherit;
+  letter-spacing: inherit;
+  margin: 1em;
+  padding: 1em 2em;
+
+}
+#refresh{
+    color: #b6dffa;
+  }
+   #refresh:hover {
+      animation: halftone 1s forwards;
+      background: radial-gradient(circle,  #d10c37 0.2em, transparent 0.25em) 0 0 / 1.25em 1.25em
+                , radial-gradient(circle,  #d10c37  0.2em, transparent 0.25em) 6.25em 6.25em / 1.25em 1.25em;
+      color: adjust-hue( #b6dffa,180);
+    
+}
+@keyframes halftone {
+  100% {
+    background-size: 2.375em 2.375em, 0.1em 0.1em;
+  }
+}
+
+#start-btn {
+  color: #c00ae4;
+}
+  #start-btn:hover {
+    animation: stripes-move 0.75s infinite linear;
+    background: repeating-linear-gradient(45deg,  #82f6d8 0,  #82f6d8 0.25em, transparent 0.25em, transparent .5em);
+    color: adjust-hue( #82f6d8,180);
+  
+}
+
+@keyframes stripes-move {
+  100% {
+    background-position: 5em 0px;
+  }
+}
+
+#reset-btn{
+  color: #eb7c22;
+}
+  
+  #reset-btn:hover {
+    animation: sawtooth 0.35s infinite linear;
+    background: linear-gradient(45deg,  #d3f169, 0.5em, transparent 0.5em) 0 0 / 1em 1em
+              , linear-gradient(-45deg,  #d3f169, 0.5em, transparent 0.5em) 0 0 / 1em 1em;
+    color: adjust-hue( #d3f169,180);
+  
+}
+
+@keyframes sawtooth {
+  100% {
+    background-position: 1em 0;
+  }
+}
+
+#addtodo {
+  color: #f71e66;
+
+}
+  #addtodo:hover {
+    animation: blinds 0.75s linear forwards;
+    background: linear-gradient(0deg, #7cf07f 25%, transparent 25%) 0 0 / 0.5em 0.5em
+              , linear-gradient(0deg, #88d6f3 50%, transparent 50%) 0 0 / 1em 1em;
+    color: adjust-hue( #7cf07f,180);
+  
+}
+
+@keyframes blinds {
+  100% {
+    background-position: 0 0, 0 -3em;
+    background-size: 0 0, 1em 6em;
+  }
+}
+
+ .currency, .clock, .todo, .weather, .timer{
+  text-align: center;
+  font-family: "roboto";
+  width:50%;
+  border-radius:5px;
+  color:black;
+  margin: 30px;
+  padding:30px;
+
+}
+.facts{
+  width:50%;
+  background-color: white;
+  justify-content: flex-end;
+  border-radius:0px;
+  margin:30px;
+  font-family:'bree serif';
+  font-size:1.5em;
+}
+
+.clock h2{
+  font-size:2em;
+}
+#todolist{
+margin-top:50%;
+width:300px;
+height:70px;
+}
+ul{
+  list-style: none;
+}
+li{
+  text-align:left;
+  text-decoration: underline;
+  font-size:1.5em;
+  margin-left:50px;
+  padding-top:15px;
+
+}
+
+img{
+width:100px;
+height: 100px;
+}
+@keyframes float {
+	0% {
+		box-shadow: 0 0px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 20px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 0px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+}
