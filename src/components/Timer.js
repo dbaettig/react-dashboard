@@ -26,7 +26,7 @@ class Timer extends React.Component {
     }
 
     handleResetClick = () => {
-        if (this.state.seconds > 0) {
+        if (this.state.seconds > 0 || this.state.seconds === 0) {
             clearInterval(this.decrementer);
             this.setState({
                 seconds: 10,
@@ -44,18 +44,18 @@ class Timer extends React.Component {
             clearInterval(this.decrementer);
 
         }
+        let timeDone = "timer"
         if (this.state.seconds === 0) {
-            this.setState({ resetbutton: true });
+            timeDone += " timerVib";
         }
         return (
             <div className="wrapper">
-                <div className="timer">
+                <div className={timeDone}>
                     <h1>timer</h1>
                     <h2 className="counter">{counter(this.state.seconds)}</h2>
 
                     <button id="start-btn" onClick={this.handleStartClick}>start</button>
-                    <button id="reset-btn" style={{ display: this.state.resetbutton ? 'block' : 'none' }}
-                        onClick={this.handleResetClick}>reset</button>
+                    <button id="reset-btn" onClick={this.handleResetClick}>reset</button>
                 </div>
                 <div className="facts">
                     The Japanese also have a low tolerance of tardiness.
