@@ -1,3 +1,4 @@
 Daniela Baettig
 
-https://github.com/dbaettig/react-dashboard
+[Github Pages] (https://dbaettig.github.io/react-dashboard)
+
